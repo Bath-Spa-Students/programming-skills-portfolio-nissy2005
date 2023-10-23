@@ -1,81 +1,24 @@
 # Invite some people to dinner.
 guests = ['neha', 'abhirami', 'helen']
 
-name = guests[0].title()
-print(name + ", please come to dinner.")
+print("please come to dinner.", guests[0])
+print("Miss," + guests[1] + "please come to dinner")
+print("Miss," + guests[2] + "please come to dinner")
 
-name = guests[1].title()
-print(name + ", please come to dinner.")
+# Or
 
-name = guests[2].title()
-print(name + ", please come to dinner.")
+print("As per the restaurant, there is space only for two guests")
+# Remove guests from the list using pop() until only two names remain
+for _ in range(len(guests) - 2):
+    removed_guest = guests.pop()
+    print(f"Sorry, {removed_guest}, I can't invite you to dinner.")
 
-name = guests[1].title()
-print("\nSorry, " + name + " can't make it to dinner.")
+# Print a message to the two people still on your list
+for guest in guests:
+    print(f"{guest}, you're still invited to dinner.")
 
-# Jack can't make it! Let's invite Gary instead.
-del(guests[1])
-guests.insert(1, 'alia')
+# Use del to remove the last two names from your list
+del guests[:]
 
-# Print the invitations again.
-name = guests[0].title()
-print("\n" + name + ", please come to dinner.")
-
-name = guests[1].title()
-print(name + ", please come to dinner.")
-
-name = guests[2].title()
-print(name + ", please come to dinner.")
-
-# We got a bigger table, so let's add some more people to the list.
-print("\nWe got a bigger table!")
-guests.insert(0, 'angel')
-guests.insert(2, 'dharshana')
-guests.append('lana')
-
-name = guests[0].title()
-print(name + ", please come to dinner.")
-
-name = guests[1].title()
-print(name + ", please come to dinner.")
-
-name = guests[2].title()
-print(name + ", please come to dinner.")
-
-name = guests[3].title()
-print(name + ", please come to dinner.")
-
-name = guests[4].title()
-print(name + ", please come to dinner.")
-
-name = guests[5].title()
-print(name + ", please come to dinner.")
-
-# Oh no, the table won't arrive on time!
-print("\nSorry, we can only invite two people to dinner.")
-
-name = guests.pop()
-print("Sorry, " + name.title() + " there's no room at the table.")
-
-name = guests.pop()
-print("Sorry, " + name.title() + " there's no room at the table.")
-
-name = guests.pop()
-print("Sorry, " + name.title() + " there's no room at the table.")
-
-name = guests.pop()
-print("Sorry, " + name.title() + " there's no room at the table.")
-
-# There should be two people left. Let's invite them.
-name = guests[0].title()
-print(name + ", please come to dinner.")
-
-name = guests[1].title()
-print(name + ", please come to dinner.")
-
-# Empty out the list.
-del(guests[0])
-del(guests[0])
-
-# Prove the list is empty.
-print(guests)
+# Print your list to make sure it's empty
+print("Guest list:", guests)
