@@ -1,32 +1,20 @@
-locations = ['himalaya', 'andes', 'tierra del fuego', 'labrador', 'guam']
+places= ['kerela', 'georgia', 'south korea', 'malayasia', 'new york'] #original list
+print(places) #prints the original list
 
-print("Original order:")
-print(locations)
+print(sorted(places)) #prints the list in alphabetic order
 
-print("\nAlphabetical:")
-print(sorted(locations))
+print(places) #print the original list
 
-print("\nOriginal order:")
-print(locations)
+print(sorted(places, reverse=True)) # prints list in Reverse alphabetic order
 
-print("\nReverse alphabetical:")
-print(sorted(locations, reverse=True))
+print(places) # shows the original list
 
-print("\nOriginal order:")
-print(locations)
+places.reverse() # make the list in reverse order
+print(places) # prints the list in reverse order
+places.reverse() # changes the reversed list to its original state
+print(places) # print the list
 
-print("\nReversed:")
-locations.reverse()
-print(locations)
-
-print("\nOriginal order:")
-locations.reverse()
-print(locations)
-
-print("\nAlphabetical")
-locations.sort()
-print(locations)
-
-print("\nReverse alphabetical")
-locations.sort(reverse=True)
-print(locations)
+places.sort()
+print(places)
+places.sort(reverse=True)
+print(places)
